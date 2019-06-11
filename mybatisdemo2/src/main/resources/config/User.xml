@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="abc">
+
+    <select id="queryUserById" parameterType="int" resultType="com.ming.po.User">
+        select * from user where id = #{myId}
+    </select>
+
+    <select id="findUserByName"  resultType="com.ming.po.User">
+        select * from user where username = #{value};
+    </select>
+
+    <select id="queryUserByNameFaint" parameterType="java.lang.String" resultType="com.ming.po.User">
+        select * from user where username like "%${value}%";
+    </select>
+
+    <!--
+        insert : 没有返回值
+    -->
+    <insert id="addUser" parameterType="com.ming.po.User">
+        <!--
+            keyProperty : 将查询结果(就一个数字，当前表中最大的ID值)封装到User对象的id属性中
+            order       : 在insert语句之前还是之后执行 last_insert_id();
+            resultType  : 执行select last_insert_id()之后的返回值
+        -->
+       <!-- <selectKey keyProperty="id" order="AFTER" resultType="int">
+            select last_insert_id();
+        </selectKey>-->
+        insert into user (username,birthday,sex,address) values (#{username},#{birthday},#{sex},#{address});
+    </insert>
+
+    <!--
+        update: DDL(Data Defined Language)
+    -->
+    <update id="modifyUser" parameterType="com.ming.po.User">
+        update  user set username=#{username},sex=#{sex}, address=#{address} where id = ${id}
+    </update>
+
+    <delete id="delUser" parameterType="com.ming.po.User">
+        delete from user where username = #{username}
+    </delete>
+
+</mapper>
