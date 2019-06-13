@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <properties resource="db.properties"/>
+
+    <!--还有一个可以优化的地方,在mapper中一个语句返回的结果经常是一个po对象,例如io.github.seevae.po.User
+        使用下面的标签可以使用一个简单的标记来代替较长的限定名
+
+        但这种方式我们仍然认为比较麻烦,因为如果有很多类那么就需要很多条这样的语句,同样,可以使用组件扫描的方式
+     -->
+    <typeAliases>
+        <!--<typeAlias type="io.github.seevae.po.User" alias="User"/>-->
+        <!--此时mybatis会为我们自动创建别名,且别名的名称就是包中类的名称,不区分大小写-->
+        <package name="io.github.seevae.po"/>
+    </typeAliases>
+
+    <environments default="developer">
+        <environment id="developer">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <!--这是比较传统,繁琐的方式,还可以使用包扫描的方式-->
+    <!--<mappers>-->
+        <!--<mapper resource="config/UserManager.xml"/>-->
+    <!--</mappers>-->
+    <!--Mapper放在一起使用组件扫描器进行扫描
+        必须遵循:
+            1.mapper代理的规范必须全部遵循
+            2.将mapper.xml文件的命名和mapper接口的命名保持完全一致,并且在同一个目录内
+    -->
+    <mappers>
+        <package name="io.github.seevae.mapper"/>
+    </mappers>
+
+</configuration>
