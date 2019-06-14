@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="io.github.seevae.mapper.UserMapper">
+
+
+        <resultMap id="myResultMap" type="io.github.seevae.po.User">
+            <id column="my_id" property="id"/>
+            <result column="user_name" property="username"/>
+            <result column="user_birthday" property="birthday"/>
+        </resultMap>
+
+        <select id="queryUserById" parameterType="int" resultMap="myResultMap">
+              select username as user_name,birthday as user_birthday from user where id = #{value};
+        </select>
+
+    <!--sql片段-->
+    <sql id="sql01">
+        <if test="userExtend != null">
+            <if test="userExtend.sex != null">
+                and sex=#{userExtend.sex}
+            </if>
+            <if test="userExtend.username != null">
+                and username like "%${userExtend.username}%"
+            </if>
+        </if>
+    </sql>
+
+
+    <!--多条件下的查询  select * from user where sex="1" and username like "%张%";-->
+    <!--<select id="queryByMoreCon" parameterType="io.github.seevae.bz.UserGroom" resultType="io.github.seevae.po.UserExtend">-->
+        <!--select *-->
+        <!--from user-->
+        <!--where-->
+        <!--sex=#{userExtend.sex}-->
+        <!--and username like "%${userExtend.username}%";-->
+    <!--</select>-->
+
+    <!--多条件查询动态sql的方式-->
+    <select id="queryByMoreCon" parameterType="io.github.seevae.bz.UserGroom" resultType="io.github.seevae.po.UserExtend">
+        select
+            *
+        from
+            user
+        <where>
+            <if test="userExtend != null">
+                <if test="userExtend.sex != null">
+                    and sex=#{userExtend.sex}
+                </if>
+                <if test="userExtend.username != null">
+                    and username like "%${userExtend.username}%"
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <!--错误示范,注意输入,输出映射的类型都是错误的-->
+    <select id="queryByMoreCon2" parameterType="io.github.seevae.po.User" resultType="io.github.seevae.po.User">
+        select *
+        from user
+        where
+        sex=#{user.sex}
+        and username like "%${user.username}%";
+    </select>
+
+
+    <select id="queryNumber" parameterType="io.github.seevae.bz.UserGroom" resultType="int">
+        select
+            count(*)
+        from
+            user
+        <where>
+            <include refid="sql01"/>
+        </where>
+    </select>
+
+    <select id="testForEach" parameterType="io.github.seevae.bz.UserGroom" resultType="io.github.seevae.po.User">
+        select
+        *
+        from
+        user
+        <where>
+          <foreach collection="idList" item="everyid" open="and (" close=")" separator="or">
+              id=#{everyid}
+          </foreach>
+        </where>
+    </select>
+
+
+</mapper>
