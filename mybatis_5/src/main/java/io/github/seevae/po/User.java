@@ -1,32 +1,16 @@
-package com.ming.po;
-
-/**
- * PO
- */
+package io.github.seevae.po;/*
+    name zhang;
+    */
 
 import java.util.Date;
 
-
-/**
- * PO Persistence Object 持久化对象
- * 它的属性名要和数据库字段名一致(映射O--->R)
- */
 public class User {
 
     private int id;
-
     private String username;
-
     private Date birthday;
-
     private int sex;
-
     private String address;
-
-    public User(){
-
-
-    }
 
     public int getId() {
         return id;
@@ -36,7 +20,6 @@ public class User {
         this.id = id;
     }
 
-    //getUsername====>  username
     public String getUsername() {
         return username;
     }

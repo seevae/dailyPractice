@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="io.github.seevae.mapper.OrdersMapper">
+    <select id="findUserWithOrder"  resultType="io.github.seevae.po.OrdersExtend">
+          select orders.*,user.username,user.birthday,user.sex,user.address
+          from user,orders
+          where user.id = orders.user_id;
+    </select>
+
+    <resultMap id="resultMap1" type="io.github.seevae.po.OrdersExtend">
+        <id column="id" property="id"/>
+        <result column="number" property="number"/>
+        <result column="createtime" property="createtime"/>
+        <!--1:1-->
+        <association property="user" javaType="io.github.seevae.po.User">
+            <id column="user_id" property="id"/>
+            <result property="username" column="user_name"/>
+            <result property="userbirthdy" column="user_birthday"/>
+        </association>
+    </resultMap>
+    
+    <select id="findUserWithOrder2" resultMap="resultMap1">
+        select orders.id,orders.number,orders.createtime,user.id as user_id,user.username as user_name,user.address as user_birthday
+        from user,orders
+        where user.id = orders.user_id;
+    </select>
+
+
+    <resultMap id="resultMap2" type="io.github.seevae.po.OrdersExtend">
+        <id column="id" property="id"/>
+        <result property="userid" column="user_id"/>
+        <result column="number" property="number"/>
+        <result column="createtime" property="createtime"/>
+        <result property="note" column="note"/>
+        <!--1:1-->
+        <association property="user" javaType="io.github.seevae.po.User">
+            <id column="id" property="id"/>
+            <result property="username" column="username"/>
+            <result column="birthday" property="birthday"/>
+            <result column="sex" property="sex"/>
+            <result column="address" property="address"/>
+        </association>
+        <!--1:m-->
+        <collection property="orderdetail" javaType="io.github.seevae.po.Orderdetail">
+            <id property="id" column="id"/>
+            <result column="orders_id" property="ordersId"/>
+            <result column="items_id" property="itemsId"/>
+            <result column="Items_num" property="itemsNum"/>
+        </collection>
+    </resultMap>
+
+    <select id="findOrderOrderDetailRM" resultMap="resultMap2">
+        select
+            orders.*,
+            user.username,user.birthday,user.sex,user.address,
+            orderdetail.orders_id,orderdetail.items_id,orderdetail.items_num
+        from
+            user,orders,orderdetail
+        where
+            user.id = orders.user_id and orders.id = orderdetail.orders_id;
+    </select>
+
+
+    <resultMap id="resultMap3" type="io.github.seevae.po.OrdersExtend">
+        <id property="id" column="id"/>
+        <result property="userid" column="user_id"/>
+        <result column="number" property="number"/>
+        <result column="createtime" property="createtime"/>
+        <result property="note" column="note"/>
+        <association property="user" javaType="io.github.seevae.po.User">
+            <id column="id" property="id"/>
+            <result property="username" column="username"/>
+            <result column="birthday" property="birthday"/>
+            <result column="sex" property="sex"/>
+            <result column="address" property="address"/>
+        </association>
+        <collection property="orderdetail" javaType="io.github.seevae.po.Orderdetail">
+            <id property="id" column="id"/>
+            <result column="orders_id" property="ordersId"/>
+            <result column="items_id" property="itemsId"/>
+            <result column="Items_num" property="itemsNum"/>
+            <!--m:n-->
+            <association property="items" javaType="io.github.seevae.po.Items">
+                <id column="id" property="id"/>
+                <result property="name" column="name"/>
+                <result property="price" column="price"/>
+                <result property="detail" column="detail"/>
+                <result property="pic" column="pic"/>
+            </association>
+        </collection>
+    </resultMap>
+
+    <select id="findUserToItems" resultMap="resultMap3">
+      select
+          orders.*,user.username,user.birthday,user.sex,user.address,
+          orderdetail.orders_id,orderdetail.items_id,orderdetail.items_num,
+          items.name,items.price,items.detail,items.pic
+      from
+          user,orders,orderdetail,items
+      where
+          user.id = orders.user_id and orders.id = orderdetail.orders_id and items.id = orderdetail.items_id;
+    </select>
+
+</mapper>

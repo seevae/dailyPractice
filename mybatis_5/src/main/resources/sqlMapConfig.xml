@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration>
 
     <properties resource="db.properties"/>
+
+    <typeAliases>
+        <package name="io.github.seevae.po"/>
+    </typeAliases>
 
     <environments default="developer">
         <environment id="developer">
@@ -17,9 +22,10 @@
             </dataSource>
         </environment>
     </environments>
-
+    
+    
     <mappers>
-        <mapper resource="config/User.xml"/>
+        <package name="io.github.seevae.mapper"/>
     </mappers>
-
+    
 </configuration>
