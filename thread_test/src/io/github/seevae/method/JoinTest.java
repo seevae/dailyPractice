@@ -15,6 +15,7 @@ class Join implements  Runnable{
             }
         }
     }
+
 }
 
 public class JoinTest {
@@ -31,3 +32,4 @@ public class JoinTest {
         System.out.println("主线程执行完毕");
     }
 }
+
