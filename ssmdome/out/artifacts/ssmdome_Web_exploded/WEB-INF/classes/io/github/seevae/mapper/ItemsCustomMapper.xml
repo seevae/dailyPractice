@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper>
+
+        <sql id="pianduan1">
+            <if test="ItemsCustom != null">
+                <if test="ItemsCustom.name != null">
+                    items.name like '%${itemsCustom.name}%'
+                </if>
+            </if>
+        </sql>
+
+        <select id="queryItemsByName" parameterType="io.github.seevae.po.ItemsVO" resultType="io.github.seevae.po.ItemsCustom">
+              select * from items
+              <where>
+                  <include refid="pianduan1"/>
+              </where>
+        </select>
+
+</mapper>
