@@ -6,7 +6,16 @@
 <configuration>
 
     <properties resource="db.properties"/>
-
+    
+    <!-- 做mybatis的全局设置-->
+    <!--开启延迟加载-->
+    <settings>
+        <!--启用延迟加载特性,不配置默认关闭该特性-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--按需加载: false: 使用关联属性,及时加载  true,加载对象,则加载-->
+        <setting name="aggressiveLazyLoading" value="falese"/>
+    </settings>
+    
     <typeAliases>
         <package name="io.github.seevae.po"/>
     </typeAliases>
