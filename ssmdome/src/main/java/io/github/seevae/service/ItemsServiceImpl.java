@@ -36,4 +36,18 @@ public class ItemsServiceImpl implements ItemsService{
         itemsMapper.updateByPrimaryKeyWithBLOBs(items);
     }
 
+    @Override
+    public void deleteByID(Integer id) throws Exception {
+       itemsMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public void addItems(ItemsCustom itemsCustom) throws Exception {
+        //itemsMapperCustom.modifyItems(id, itemsCustom);
+        itemsMapper.insert(itemsCustom);
+    }
+
+    public void deleteids(Integer [] arr) throws Exception{
+        itemsCustomMapper.deleteAll(arr);
+    }
 }
