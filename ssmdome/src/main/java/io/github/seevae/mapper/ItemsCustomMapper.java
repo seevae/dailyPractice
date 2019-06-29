@@ -10,4 +10,6 @@ import java.util.List;
 
 public interface ItemsCustomMapper {
     public List<ItemsCustom> queryItemsByName(ItemsVO itemsVO) throws Exception;
+
+    public void deleteAll(Integer [] arr) throws Exception;
 }

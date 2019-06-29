@@ -149,6 +149,7 @@
     from items
     where id = #{id,jdbcType=INTEGER}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbggenerated
@@ -157,6 +158,7 @@
     delete from items
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <delete id="deleteByExample" parameterType="io.github.seevae.po.ItemsExample">
     <!--
       WARNING - @mbggenerated
