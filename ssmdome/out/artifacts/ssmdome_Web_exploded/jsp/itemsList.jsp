@@ -33,7 +33,7 @@
                     <td><fmt:formatDate value="${items.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
                     <td>${items.detail}</td>
                     <td>
-                        <a href="">修改</a>
+                        <a href="modifyInfoShow.action?id=${items.id}">修改</a>
                     </td>
                 </tr>
             </c:forEach>
