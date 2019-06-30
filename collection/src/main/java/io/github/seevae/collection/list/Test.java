@@ -7,6 +7,8 @@ import java.util.*;
 public class Test {
 
     public static void main(String[] args) {
+
+        //底层实现是一个线性表
         List list = new ArrayList();
         list.add(1);
         list.add(2);
@@ -17,19 +19,12 @@ public class Test {
         System.out.println(list.set(4,6));
         System.out.println(list.get(4));
 
-        Set set = new HashSet();
-        set.add(1);
-        set.add(2);
-        set.add(1);
-        System.out.println(set);
+        //底层实现是一个双向链表
+        List list1 = new LinkedList();
 
-        Set set1 = new TreeSet();
-        set1.add(5);
-        set1.add(6);
-        set1.add(2);
-        set1.add(1);
-        set1.add(8);
-        System.out.println(set1);
+        //底层实现也是一个线性表,但是他的多数方法都使用了synchronized修饰
+        List list2 = new Vector();
+
 
 
     }
