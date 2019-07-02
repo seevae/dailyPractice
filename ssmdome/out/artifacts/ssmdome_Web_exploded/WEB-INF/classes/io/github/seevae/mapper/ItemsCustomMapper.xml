@@ -18,4 +18,18 @@
               </where>
         </select>
 
+
+    <sql id="deleteItemsByIdsSQL">
+        <foreach collection="array" item="everyid" open="id in (" close=")" separator=",">
+            #{everyid}
+        </foreach>
+    </sql>
+
+    <delete id="deleteAll" parameterType="java.lang.Integer">
+        delete from items
+        <where>
+            <include refid="deleteItemsByIdsSQL"/>
+        </where>
+    </delete>
+
 </mapper>

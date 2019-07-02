@@ -43,6 +43,5 @@ public class LockTime {
         Thread thread2 = new Thread(taskTime);
         thread1.start();
         thread2.start();
-
     }
 }

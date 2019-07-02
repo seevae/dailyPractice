@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SerializationTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SerializationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/github/seevae/SerializationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="688">
+              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
               <folding>
                 <element signature="e#143#144#0" expanded="true" />
                 <element signature="e#170#171#0" expanded="true" />
@@ -27,6 +27,15 @@
                 <element signature="e#330#331#0" expanded="true" />
                 <element signature="e#360#361#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/io/github/seevae/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -44,6 +53,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/io/github/seevae/SerializationTest.java" />
+        <option value="$PROJECT_DIR$/src/io/github/seevae/Test.java" />
       </list>
     </option>
   </component>
@@ -97,25 +107,6 @@
               <item name="github" type="462c0819:PsiDirectoryNode" />
               <item name="seevae" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Serialization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Serialization" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="seevae" type="462c0819:PsiDirectoryNode" />
-              <item name="SerializationTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Serialization" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Serialization" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="seevae" type="462c0819:PsiDirectoryNode" />
-              <item name="SerializationTest.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-              <item name="SerializationTest" type="1a9f42e2:ClassTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -147,9 +138,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="SerializationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.github.seevae.SerializationTest" />
+      <module name="Serialization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.seevae.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.seevae.Test" />
       <module name="Serialization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -200,8 +202,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.SerializationTest" />
+      <item itemvalue="Application.Test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.SerializationTest" />
       </list>
     </recent_temporary>
@@ -216,12 +223,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562051002421</updated>
-      <workItem from="1562051005695" duration="1135000" />
+      <workItem from="1562051005695" duration="4929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1135000" />
+    <option name="totallyTimeSpent" value="4929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -237,7 +244,7 @@
       <window_info anchor="right" x="0" y="0" width="434" height="850" id="Documentation" side_tool="true" weight="0.3299356" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919955" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33370912" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -277,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/github/seevae/SerializationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="688">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
           <folding>
             <element signature="e#143#144#0" expanded="true" />
             <element signature="e#170#171#0" expanded="true" />
@@ -289,6 +296,13 @@
             <element signature="e#330#331#0" expanded="true" />
             <element signature="e#360#361#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/seevae/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
