@@ -3,15 +3,13 @@ package io.github.seevae.map;/*
     */
 
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class HashMapTest {
 
     public static void main(String[] args) {
-//        Map map = new HashMap();
+        Map map = new HashMap();
+        Map map1 = new Hashtable();
 //        map.put(1,"hello");
 //        map.put(1,"world");
 //        map.put(2,"???");
