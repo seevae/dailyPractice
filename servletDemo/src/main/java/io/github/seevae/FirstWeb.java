@@ -1,6 +1,4 @@
-package io.github.seevae;/*
-    name zhang;
-    */
+package io.github.seevae;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +12,6 @@ public class FirstWeb extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=utf-8");
-
         System.out.println("收到了来自客户端的请求,马上返回响应...");
         response.getWriter().write("这是给你的响应信息");
     }
@@ -23,4 +20,5 @@ public class FirstWeb extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
     }
+
 }
