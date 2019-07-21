@@ -21,14 +21,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellTicketsTestLock.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SellTicketsTestLock.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="570">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deadLock.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/qi/thread/deadLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -47,6 +56,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/qi/thread/SellTicketsTest.java" />
         <option value="$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java" />
+        <option value="$PROJECT_DIR$/src/com/qi/thread/deadLock.java" />
       </list>
     </option>
   </component>
@@ -130,7 +140,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SellTicketsTestLock">
+  <component name="RunManager" selected="Application.deadLock">
     <configuration name="SellTicketsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.qi.thread.SellTicketsTest" />
       <module name="SEreviews" />
@@ -155,6 +165,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="deadLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.thread.deadLock" />
+      <module name="SEreviews" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qi.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -197,9 +218,11 @@
     <list>
       <item itemvalue="Application.SellTicketsTest" />
       <item itemvalue="Application.SellTicketsTestLock" />
+      <item itemvalue="Application.deadLock" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.deadLock" />
         <item itemvalue="Application.SellTicketsTestLock" />
         <item itemvalue="Application.SellTicketsTest" />
       </list>
@@ -215,12 +238,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563672144953</updated>
-      <workItem from="1563672149243" duration="2176000" />
+      <workItem from="1563672149243" duration="3454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2176000" />
+    <option name="totallyTimeSpent" value="3454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -236,11 +259,11 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919955" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919955" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -272,11 +295,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="570">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/qi/thread/deadLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
