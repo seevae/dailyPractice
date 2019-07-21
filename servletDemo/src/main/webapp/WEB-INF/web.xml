@@ -4,23 +4,19 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1" metadata-complete="true">
-    <!--全局参数-->
-    <context-param>
-        <param-name>encoding</param-name>
-        <param-value>utf-8</param-value>
-    </context-param>
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
 
-    <servlet>
-        <servlet-name>FirstWeb</servlet-name>
-        <servlet-class>io.github.seevae.FirstWeb</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>FirstWeb</servlet-name>
-        <url-pattern>/firstWeb</url-pattern>
-    </servlet-mapping>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/notfind.jsp</location>
+    </error-page>
 
 </web-app>

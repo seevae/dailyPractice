@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0be6ccc4-00a1-479d-9f54-4201682b2204" name="Default" comment="" />
+    <list default="true" id="3fd9580d-c167-44fa-a785-bc33b1b4b980" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,25 +12,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="SellTicketsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="209" column="12" lean-forward="true" selection-start-line="183" selection-start-column="3" selection-end-line="209" selection-end-column="12" />
+            <state relative-caret-position="194">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <file leaf-file-name="SellTicketsTestLock.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="536">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/qi/thread/SellTicketsTest.java" />
+        <option value="$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -40,7 +57,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="539" />
+    <option name="x" value="517" />
     <option name="width" value="1098" />
     <option name="height" value="1092" />
   </component>
@@ -53,68 +70,34 @@
         <subPane>
           <expand>
             <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="SEreviews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEreviews" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="SEreviews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEreviews" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="SEreviews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEreviews" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="SEreviews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEreviews" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="SEreviews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SEreviews" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-              <item name="github" type="462c0819:PsiDirectoryNode" />
-              <item name="seevae" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servletDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servletDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qi" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -147,7 +130,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SellTicketsTestLock">
+    <configuration name="SellTicketsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.thread.SellTicketsTest" />
+      <module name="SEreviews" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qi.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="SellTicketsTestLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.thread.SellTicketsTestLock" />
+      <module name="SEreviews" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qi.thread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -189,50 +194,60 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.SellTicketsTest" />
+      <item itemvalue="Application.SellTicketsTestLock" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SellTicketsTestLock" />
+        <item itemvalue="Application.SellTicketsTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0be6ccc4-00a1-479d-9f54-4201682b2204" name="Default" comment="" />
-      <created>1563019981105</created>
+      <changelist id="3fd9580d-c167-44fa-a785-bc33b1b4b980" name="Default" comment="" />
+      <created>1563672144953</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1563019981105</updated>
-      <workItem from="1563019983873" duration="1548000" />
+      <updated>1563672144953</updated>
+      <workItem from="1563672149243" duration="2176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1548000" />
+    <option name="totallyTimeSpent" value="2176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
-      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919955" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Web" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -248,17 +263,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="209" column="12" lean-forward="true" selection-start-line="183" selection-start-column="3" selection-end-line="209" selection-end-column="12" />
+        <state relative-caret-position="194">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/qi/thread/SellTicketsTestLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="536">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
