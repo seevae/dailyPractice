@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注入接口还是类呢?-->
+
+    <bean id="changetoLowerCase" class="com.qi.diInterface01.ChangetoLowerCase">
+        <property name="str" value="HHHHHHHHHHHHHHHAAAAAA"></property>
+     </bean>
+
+
+    <bean id="changetoUpCase" class="com.qi.diInterface01.ChangetoUpCase">
+        <property name="str" value="aaaaaaaaaaaaassdqqqeqeqe"></property>
+    </bean>
+
+
+
+</beans>
