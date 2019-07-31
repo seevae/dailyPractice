@@ -9,15 +9,15 @@ public class User {
     private String name;
     private Integer age;
     private String address;
-    private Date birthday;
+  //  private Date birthday;
 
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+//    public Date getBirthday() {
+//        return birthday;
+//    }
+//
+//    public void setBirthday(Date birthday) {
+//        this.birthday = birthday;
+//    }
 
     public String getName() {
         return name;

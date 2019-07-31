@@ -53,11 +53,11 @@
         <property name="name" value="hfc"/>
         <property name="age" value="20"/>
         <property name="address" value="北京"/>
-        <property name="birthday" value="2019-10-06"/>
+        <!--<property name="birthday" value="2019-10-06"/>-->
     </bean>
 
     <!--使用构造器的方式-->
-    <bean id="user02" class="com.qi.User" autowire="constructor">
+    <bean id="user02" class="com.qi.User" autowire="constructor" scope="prototype">
         <constructor-arg index="0" value="刚纯宁次"></constructor-arg>
         <constructor-arg index="1" value="30"></constructor-arg>
         <constructor-arg index="2" value="小日本"></constructor-arg>
