@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:context="http://www.springframework.org/schema/context"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dept" class="com.qi.Dept">
+        <property name="deptname">
+            <value>研发部</value>
+        </property>
+
+        <property name="address">
+            <value>西安</value>
+        </property>
+
+        <property name="userList">
+            <list>
+                <ref bean="user01"/>
+                <ref bean="user02"/>
+            </list>
+        </property>
+
+        <property name="userSet">
+            <set>
+                <ref bean="user01"/>
+                <ref bean="user02"/>
+            </set>
+        </property>
+
+        <property name="userMap">
+            <map>
+                <entry key="1" value-ref="user01"></entry>
+                <entry key="2" value-ref="user02"></entry>
+            </map>
+        </property>
+
+        <!--使用properties集来进行  他也是你的键值对-->
+        <property name="properties">
+               <props>
+                   <prop key="driver">root</prop>
+                    <prop key="url">haha</prop>
+               </props>
+        </property>
+
+    </bean>
+
+    <!--使用set方式注入-->
+    <bean id="user01" class="com.qi.User">
+        <property name="name" value="hfc"/>
+        <property name="age" value="20"/>
+        <property name="address" value="北京"/>
+        <property name="birthday" value="2019-10-06"/>
+    </bean>
+
+    <!--使用构造器的方式-->
+    <bean id="user02" class="com.qi.User" autowire="constructor">
+        <constructor-arg index="0" value="刚纯宁次"></constructor-arg>
+        <constructor-arg index="1" value="30"></constructor-arg>
+        <constructor-arg index="2" value="小日本"></constructor-arg>
+    </bean>
+
+
+    <!--spring在bean注入时候的继承关系-->
+
+
+
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="student" class="com.qi.Sspringextends01.Student">
+        <property name="name" value="张三的爸爸"/>
+        <property name="age">
+            <value>90</value>
+        </property>
+
+        <!--&lt;!&ndash;构造方法&ndash;&gt;-->
+        <!--<constructor-arg index="0" value="张三的爸爸"></constructor-arg>-->
+        <!--<constructor-arg index="1" value="90"/>-->
+
+    </bean>
+
+    <bean id="smallStu" parent="student" class="com.qi.Sspringextends01.SmallStu">
+        <property name="name" value="张三"/>
+        <property name="age">
+            <value>2</value>
+        </property>
+        <property name="eatMilk" value="蒙牛"></property>
+    </bean>
+
+
+
+
+
+</beans>
