@@ -7,5 +7,34 @@
     http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!--bean的注入-->
+    <bean id="serviceImpl" class="com.qi.aop.CustomerService">
+        <property name="name" value="宇智波佐助"></property>
+    </bean>
+
+    <!--注入切面(前置通知)-->
+    <bean id="befoAdvice" class="com.qi.aop.BeforAdvice"/>
+
+    <!--配置Spring代理对象-->
+    <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--配置代理接口集,有多个通知,所以要用list-->
+        <property name="proxyInterfaces">
+            <list>
+                <!--说明是对哪一个接口进行代理的-->
+                <value>com.qi.aop.ServiceInter</value>
+            </list>
+        </property>
+
+        <!--把通知织入到代理对象,将切面加入到主流业务上-->
+        <property name="interceptorNames">
+            <list>
+                <value>befoAdvice</value>
+            </list>
+        </property>
+
+        <!--规定给哪个类做的代理-->
+        <property name="target" ref="serviceImpl"/>
+
+    </bean>
 
 </beans>

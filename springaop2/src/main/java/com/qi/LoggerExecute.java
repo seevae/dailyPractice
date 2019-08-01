@@ -12,7 +12,6 @@ import org.aopalliance.intercept.MethodInvocation;
 
 public class LoggerExecute implements MethodInterceptor {
 
-
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {
         befor();
         methodInvocation.proceed();
