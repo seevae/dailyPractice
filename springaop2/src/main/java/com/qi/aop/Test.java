@@ -11,8 +11,12 @@ public class Test {
                 new String[]{"applicationContext.xml"}
                 );
 
-        //找到代理类
-        ServiceInter customerService = applicationContext.getBean("proxyFactoryBean",ServiceInter.class);
-        customerService.sayHello();
+        try{
+            //找到代理类
+            ServiceInter customerService = applicationContext.getBean("proxyFactoryBean",ServiceInter.class);
+            customerService.sayHello();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

@@ -15,6 +15,12 @@
     <!--注入切面(前置通知)-->
     <bean id="befoAdvice" class="com.qi.aop.BeforAdvice"/>
 
+    <!--注入后只通知-->
+    <bean id="afterAdvice" class="com.qi.aop.AfterAdivce"/>
+
+    <bean id="aroundAdivice" class="com.qi.aop.AroundAdivice"/>
+    <bean id="throwAdvice" class="com.qi.aop.ThrowsAdbice01"/>
+
     <!--配置Spring代理对象-->
     <bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <!--配置代理接口集,有多个通知,所以要用list-->
@@ -29,6 +35,9 @@
         <property name="interceptorNames">
             <list>
                 <value>befoAdvice</value>
+                <value>afterAdvice</value>
+                <value>aroundAdivice</value>
+                <value>throwAdvice</value>
             </list>
         </property>
 
