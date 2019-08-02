@@ -17,4 +17,16 @@ public class ServiceImp implements Service{
         daoImp.add();
     }
 
+    public void serDel() throws Exception {
+        daoImp.del();
+    }
+
+    public void serUpdate() throws Exception {
+        daoImp.update();
+    }
+
+    public void serSelect() throws Exception {
+        daoImp.select();
+    }
+
 }
