@@ -4,8 +4,31 @@
 
 <mapper namespace="com.qi.mapper.UserMapper">
 
+    <!--这个就是映射文件,也叫做代理文件
+        映射文件的主要内容是输入映射和输出映射,就是下面的paramtertype和resulttype
+        还有sql语句
+        <select..>这种的叫做映射标签
+    -->
+
     <select id="findUserById" parameterType="int" resultType="com.qi.po.User">
         select * from user where id=#{id};
+    </select>
+
+    <!--根据id删除-->
+    <delete id="del" parameterType="int">
+        delete from user where id=#{id};
+    </delete>
+
+    <insert id="insertUser" parameterType="com.qi.po.User">
+        insert into user (username,sex,address) values(#{username},#{sex},#{address})
+    </insert>
+
+    <update id="updatebyid" parameterType="com.qi.po.User">
+        update user set username=#{username} where id=#{id};
+    </update>
+
+    <select id="findAll" resultType="com.qi.po.User">
+        select * from user;
     </select>
 
 </mapper>
