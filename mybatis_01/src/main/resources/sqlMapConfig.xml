@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <properties resource="db.properties"/>
+
+    <typeAliases>
+        <package name="com.qi.po"/>
+    </typeAliases>
+
+    <!--environments代表程序此时的环境. 此时环境属于开发环境(还有测试环境,生产环境等...)-->
+    <environments default="development">
+
+        <environment id="development">
+            <!--配置事务-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源,type的值是规定好的, 不能乱写-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    
+    <mappers>
+        <package name="com.qi.mapper"/>
+    </mappers>
+
+</configuration>

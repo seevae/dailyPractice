@@ -1,0 +1,47 @@
+1.首先需要配置Mybatis的配置文件,该文件一般命名为sqlMapConfig.xml
+        其中需要配置的内容如下:
+            ① 配置环境: 包括程序运行环境,事务驱动,数据源
+                <environments default="development">
+                        <environment id="development">
+                            <!--配置事务-->
+                            <transactionManager type="JDBC"></transactionManager>
+                            <!--配置数据源,type的值是规定好的, 不能乱写-->
+                            <dataSource type="POOLED">
+                                <property name="driver" value="${jdbc.driver}"/>
+                                <property name="url" value="${jdbc.url}"/>
+                                <property name="username" value="${jdbc.username}"/>
+                                <property name="password" value="${jdbc.password}"/>
+                            </dataSource>
+                        </environment>
+                    </environments>
+
+                    其中在使用数据源的时候,经常使用一个db.properties文件来管理连接者的信息,所以需要在xml文件中将该文件关联进来
+                     <properties resource="db.properties"/>
+                    该关联文件的导入应该写在xml文件的最上面
+
+2. 创建实体类对象
+        由于Mybatis是关系映射型数据库,也就是说,库中的表可以一一映射为对应的实体对象,
+        为了在外部能够接收这些实体对象,就需要先创建好和数据库中表能够对应上的实体类
+        例如本例中查询的是User表中的数据,所以就需要一个对应的User类
+
+3. 创建一个Mapper包,这个包中完成具体的sql.
+        包中分为两部分内容,接口和XxxMapper文件
+            接口一定要按照规范定义,只有按照规范定义了接口,Mybatis才能够帮助我们动态的创建这个接口的代理对象
+            我们才能够使用该对象调用的方法.
+            也就是说我们不需要自己再去定义类实现接口了,这些活Mybatis帮我们做
+
+            接口的规范:
+                1.Mapper包中的<mapper>标签中的命名空间(namespace)必须是接口的全限定名
+                2.具体的sql中,id必须是接口中对应方法的名称
+                3.sql中的输入映射parametertype必须是接口中对应属性的参数类型
+                4.sql中的输出映射resultType是接口的方法的返回值
+4.测试
+        此处采用一个逆向的过程说明应该怎么测试
+            首先,具体的查询方法在XxxMapper.xml文件当中,具体的查询操作有其对应的一个接口. 为了调用这个方法,就要有一个接口的实现类
+            Mybatis采用的是动态代理的方式,为了得到接口的代理对象,需要一个SqlSession接口的实现类对象
+            SqlSessio对象由SqlSessionFactory接口的实现类中的openSession()方法获取
+            所以现在需要一个sqlSessionFactory对象,该对象通过sqlSessionFactoryBuilder对象的build()方法获取
+            而biuld方法需要一个输入字节流对象
+            而输入字节流对象通过Resources类的静态方法getResourceAsStream()获得(该方法直接传入sqlMapConfig.xml即可)
+        逆向完成上述步骤就创建好了一个接口对象,用该对象调用具体的查询方法就可以了
+        
