@@ -1,8 +1,4 @@
-package com.qi.Test;/*
-    name zhang;
-    */
-
-
+package com.qi.Test;
 import com.qi.mapper.UserMapper;
 import com.qi.po.User;
 import org.apache.ibatis.io.Resources;
@@ -28,9 +24,12 @@ public class Test {
         user.setSex(1);
         user.setAddress("夏朝");
         userMapper.add(user);
+//
+//        //删除
+//        userMapper.del(38);
 
-        //删除
-        userMapper.del(38);
+        //还是要注意,删除,添加操作等要注意事务的提交
+        sqlSession.commit();
 
         //查找
         List<User> list = userMapper.select();
