@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.qi.mapper.Mapper">
+    
+    <select id="findlikeUser" parameterType="java.lang.String" resultType="com.qi.po.User">
+        select * from user where username like #{value};
+    </select>
+
+    <select id="findUser" parameterType="java.lang.String" resultType="com.qi.po.User">
+        select * from user where username like "%${value}%";
+    </select>
+
+    <!--获取主键信息,使得插入数据的时候让id自动递增(常用语没有设置主键的表)-->
+    <insert id="add" parameterType="com.qi.po.User" useGeneratedKeys="true" keyProperty="">
+          insert into user (username,sex,address) values (#{username},#{sex},#{address});
+    </insert>
+
+
+    <resultMap id="myresultMap" type="com.qi.po.User">
+        <id column="user_id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="user_sex" property="sex"/>
+        <result column="user_adress" property="address"/>
+    </resultMap>
+
+    <!--测试resultMap-->
+    <select id="findUserById" parameterType="int" resultMap="myresultMap">
+        select username as user_name, sex as user_sex, address as user_address from user where id=#{value};
+    </select>
+
+    <resultMap id="myResultMap" type="com.qi.po.User">
+        <id column="my_id" property="id"/>
+        <result column="user_name" property="username"/>
+        <result column="use_sex" property="sex"/>
+        <result column="user_address" property="address"/>
+    </resultMap>
+
+    <select id="queryUserById" parameterType="int" resultMap="myResultMap">
+              select username as user_name,sex as user_sex,address as user_address from user where id = #{value};
+    </select>
+
+
+    <!--查出来的结果以键值对的形式放在map集合当中-->
+    <select id="getList" parameterType="com.qi.po.UserVo" resultType="java.util.HashMap">
+        select username,sex,address from user;
+    </select>
+
+
+    
+
+
+</mapper>
