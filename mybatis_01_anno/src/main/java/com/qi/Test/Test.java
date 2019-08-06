@@ -17,19 +17,25 @@ public class Test {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession =sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
-        //添加
-        User user = new User();
-        user.setUsername("大夏武士");
-        user.setSex(1);
-        user.setAddress("夏朝");
-        userMapper.add(user);
 //
-//        //删除
-//        userMapper.del(38);
-
-        //还是要注意,删除,添加操作等要注意事务的提交
-        sqlSession.commit();
+//        //添加
+//        User user = new User();
+//        user.setUsername("马儿扎哈");
+//        user.setSex(1);
+//        user.setAddress("虚空");
+//        userMapper.add(user);
+//
+//        User user1 = new User();
+//        user.setUsername("复仇武神");
+//        user.setSex(1);
+//        user.setAddress("上古");
+//        userMapper.add(user);
+////
+////        //删除
+////        userMapper.del(38);
+//
+//        //还是要注意,删除,添加操作等要注意事务的提交
+//        sqlSession.commit();
 
         //查找
         List<User> list = userMapper.select();
