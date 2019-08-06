@@ -2,19 +2,13 @@ package com.qi;/*
     name zhang;
     */
 
+import com.qi.bz.UserGroom;
 import com.qi.mapper.Mapper;
 import com.qi.mybatisTools.MybatisTools;
-import com.qi.po.User;
-import org.apache.ibatis.io.Resources;
+import com.qi.po.UserExtend;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 
 public class Test {
 
@@ -40,7 +34,19 @@ public class Test {
 //        User list = mapper.queryUserById(16);
 //        System.out.println(list);
 
-         List<Map<String,String>> list  =  mapper.getList();
-         System.out.println(list);
+//         List<Map<String,String>> list  =  mapper.getList();
+//         System.out.println(list);
+
+        UserExtend userExtend = new UserExtend();
+        userExtend.setSex(1);
+        userExtend.setUsername("张");
+        UserGroom userGroom = new UserGroom(userExtend);
+//        List<UserExtend> userExtend1 =  mapper.queryByMoreCon(userGroom);
+//        System.out.println(userExtend1);
+
+        int count = mapper.queryNumber(userGroom);
+        System.out.println(count);
+
+
     }
 }

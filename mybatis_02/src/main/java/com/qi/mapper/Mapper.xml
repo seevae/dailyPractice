@@ -3,7 +3,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
 <mapper namespace="com.qi.mapper.Mapper">
-    
+
+    <!--sql片段-->
+    <sql id="sql01">
+        <if test="userExtend != null">
+            <if test="userExtend.sex != null">
+                and sex=#{userExtend.sex}
+            </if>
+            <if test="userExtend.username != null">
+                and username like "%${userExtend.username}%"
+            </if>
+        </if>
+    </sql>
+
     <select id="findlikeUser" parameterType="java.lang.String" resultType="com.qi.po.User">
         select * from user where username like #{value};
     </select>
@@ -43,12 +55,45 @@
 
 
     <!--查出来的结果以键值对的形式放在map集合当中-->
-    <select id="getList" parameterType="com.qi.po.UserVo" resultType="java.util.HashMap">
+    <select id="getList" parameterType="com.qi.po.UserExtend" resultType="java.util.HashMap">
         select username,sex,address from user;
     </select>
 
 
-    
+    <!--非动态sql的形式-->
+    <select id="queryByMoreCon1" parameterType="com.qi.bz.UserGroom" resultType="com.qi.po.UserExtend">
+        select *
+        from user
+        where
+        sex=#{userExtend.sex}
+        and username like "%${userExtend.username}%";
+    </select>
+
+
+    <!--动态sql的形式-->
+    <select id="queryByMoreCon" parameterType="com.qi.bz.UserGroom" resultType="com.qi.po.UserExtend">
+            select *
+            from user
+            <where>
+                <if test="userExtend!=null">
+                    <if test="userExtend.sex != null">
+                        and sex =#{userExtend.sex}
+                    </if>
+                    <if test="userExtend.username != null">
+                        and username like "%${userExtend.username}%"
+                    </if>
+                </if>
+            </where>
+    </select>
+
+    <select id="queryNumber" parameterType="com.qi.bz.UserGroom" resultType="int">
+        select count(*) from user
+        <where>
+          <include refid="sql01"/>
+        </where>
+    </select>
+
+
 
 
 </mapper>
