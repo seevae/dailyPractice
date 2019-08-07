@@ -5,9 +5,11 @@ package com.qi;/*
 import com.qi.bz.UserGroom;
 import com.qi.mapper.Mapper;
 import com.qi.mybatisTools.MybatisTools;
+import com.qi.po.User;
 import com.qi.po.UserExtend;
 import org.apache.ibatis.session.SqlSession;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
@@ -37,16 +39,25 @@ public class Test {
 //         List<Map<String,String>> list  =  mapper.getList();
 //         System.out.println(list);
 
-        UserExtend userExtend = new UserExtend();
-        userExtend.setSex(1);
-        userExtend.setUsername("张");
-        UserGroom userGroom = new UserGroom(userExtend);
+//        UserExtend userExtend = new UserExtend();
+//        userExtend.setSex(1);
+//        userExtend.setUsername("张");
+//        UserGroom userGroom = new UserGroom(userExtend);
 //        List<UserExtend> userExtend1 =  mapper.queryByMoreCon(userGroom);
 //        System.out.println(userExtend1);
 
-        int count = mapper.queryNumber(userGroom);
-        System.out.println(count);
+//        int count = mapper.queryNumber(userGroom);
+//        System.out.println(count);
 
-
+        List<Integer> integers = new ArrayList<Integer>();
+        integers.add(1);
+        integers.add(26);
+        integers.add(42);
+        UserExtend userExtend1 = new UserExtend();
+        UserGroom userGroom1 = new UserGroom(userExtend1);
+        userGroom1.setIdList(integers);
+        List<User> userExtends = mapper.queryByMoreId(userGroom1);
+        System.out.println(userExtends);
+        sqlSession.close();
     }
 }

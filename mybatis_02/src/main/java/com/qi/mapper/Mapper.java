@@ -20,4 +20,6 @@ public interface Mapper {
 
     public List<UserExtend> queryByMoreCon(UserGroom userGroom) throws Exception;
     public int queryNumber(UserGroom userGroom) throws Exception;
+
+    public List<User> queryByMoreId(UserGroom userGroom) throws Exception;
 }
