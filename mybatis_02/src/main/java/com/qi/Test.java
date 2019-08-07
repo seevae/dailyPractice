@@ -8,9 +8,12 @@ import com.qi.mybatisTools.MybatisTools;
 import com.qi.po.User;
 import com.qi.po.UserExtend;
 import org.apache.ibatis.session.SqlSession;
+import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Test {
 
@@ -49,15 +52,39 @@ public class Test {
 //        int count = mapper.queryNumber(userGroom);
 //        System.out.println(count);
 
-        List<Integer> integers = new ArrayList<Integer>();
-        integers.add(1);
-        integers.add(26);
-        integers.add(42);
-        UserExtend userExtend1 = new UserExtend();
-        UserGroom userGroom1 = new UserGroom(userExtend1);
-        userGroom1.setIdList(integers);
-        List<User> userExtends = mapper.queryByMoreId(userGroom1);
-        System.out.println(userExtends);
-        sqlSession.close();
+//        //测试传入list
+//        List<Integer> integers = new ArrayList<Integer>();
+//        integers.add(1);
+//        integers.add(26);
+//        integers.add(42);
+//        UserExtend userExtend1 = new UserExtend();
+//        UserGroom userGroom1 = new UserGroom(userExtend1);
+//        userGroom1.setIdList(integers);
+//        List<User> userExtends = mapper.queryByMoreId(userGroom1);
+//        System.out.println(userExtends);
+//        sqlSession.close();
+
+//        //测试传入数组
+//        Integer[] array = new Integer[]{1,26,42};
+//        UserExtend userExtend1 = new UserExtend();
+//        UserGroom userGroom1 = new UserGroom(userExtend1);
+//        userGroom1.setArray(array);
+//        List<User> userExtends = mapper.queryByMoreId2(userGroom1);
+//        System.out.println(userExtends);
+//        sqlSession.close();
+
+//        测试传入map
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(10);
+        list.add(16);
+        list.add(22);
+
+        String name = "小明";
+        HashMap map = new HashMap();
+        map.put("list",list);
+        map.put("name",name);
+        List<User> list1 = mapper.queryByMap(map);
+        System.out.println(list1);
+        
     }
 }

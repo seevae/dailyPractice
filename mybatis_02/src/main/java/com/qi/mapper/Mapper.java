@@ -6,6 +6,7 @@ import com.qi.bz.UserGroom;
 import com.qi.po.User;
 import com.qi.po.UserExtend;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,4 +23,7 @@ public interface Mapper {
     public int queryNumber(UserGroom userGroom) throws Exception;
 
     public List<User> queryByMoreId(UserGroom userGroom) throws Exception;
+    public List<User> queryByMoreId2(UserGroom userGroom) throws Exception;
+
+    public List<User> queryByMap(HashMap hashMap) throws Exception;
 }

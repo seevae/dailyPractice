@@ -95,14 +95,33 @@
 
 
     <!--单参数List下的查询-->
-    <!--实际的sql 是 select*from user where 1=1 and (id=1 or id=2 or id=3) 所以下面open是and( -->
+    <!--实际的sql 是 select*from user where 1=1 and (id=1 or id=2 or id=3) 所以下面open是and( ,没有and也行-->
+    <!--注意下面 id=#{every} 后面一定不能加; 加上了他会默认在查每一个id后加一个 ; -->
     <select id="queryByMoreId" parameterType="com.qi.bz.UserGroom" resultType="com.qi.po.User">
         select * from user
         <where>
-            <foreach collection="idList" item="everyid" open="and (" close=")" separator="or">
-                  id= #{everyid}
-             </foreach>
+             <foreach collection="idList" item="everyid" open="and (" close=")" separator="or">
+                    id= #{everyid}
+            </foreach>
         </where>
     </select>
+
+    <!--单参数数组下的查询-->
+    <select id="queryByMoreId2" parameterType="com.qi.bz.UserGroom" resultType="com.qi.po.User">
+        select * from user
+        <where>
+            <foreach collection="array" item="everyid" open="and (" close=")" separator="or">
+                id= #{everyid}
+            </foreach>
+        </where>
+    </select>
+    <!--传过来的是map "%"#{name}"%"-->
+    <select id="queryByMap" parameterType="java.util.HashMap" resultType="com.qi.po.User">
+        select * from  user where username like "%${name}%" and id in
+        <foreach collection="list" item="i" open="(" close=")" separator=",">
+            #{i}
+        </foreach>
+    </select>
+
 
 </mapper>

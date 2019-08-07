@@ -4,12 +4,23 @@ package com.qi.bz;/*
 
 import com.qi.po.UserExtend;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class UserGroom {
 
     private List<Integer> idList;
     private UserExtend userExtend;
+    private Integer[] array;
+    private HashMap<String,List<Integer>> hashMap;
+
+    public Integer[] getArray() {
+        return array;
+    }
+
+    public void setArray(Integer[] array) {
+        this.array = array;
+    }
 
     public UserGroom(UserExtend userExtend) {
         this.userExtend = userExtend;
