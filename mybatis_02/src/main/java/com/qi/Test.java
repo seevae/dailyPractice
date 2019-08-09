@@ -85,6 +85,6 @@ public class Test {
         map.put("name",name);
         List<User> list1 = mapper.queryByMap(map);
         System.out.println(list1);
-        
+
     }
 }

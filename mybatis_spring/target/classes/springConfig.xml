@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--自动扫描所有的类-->
+    <context:component-scan base-package="com.qi.po"/>
+
+    <!--加载所有的配置文件-->
+    <context:property-placeholder location="classpath:*.properties"/>
+
+    <!--数据库连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--  初始连接池大小 -->
+        <property name="initialPoolSize" value="10"/>
+        <!--   连接池中连接最小个数 -->
+        <property name="minPoolSize" value="5"/>
+        <property name="maxPoolSize" value="20"/>
+    </bean>
+
+    <!--管理sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 加载 mapper.xml的配置文件 -->
+        <property name="mapperLocations" value="com/qi/mapper/*.xml"/>
+        <!-- 添加所需的数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+    <!-- 扫描Dao包，加载接口映射类 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+         <property name="basePackage" value="com.qi.mapper" />
+         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+     </bean>
+
+    <!--配置userMapper对象-->
+    <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.qi.mapper.UserMapper"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+    <!-- (事务管理)transaction manager -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+</beans>
+
+

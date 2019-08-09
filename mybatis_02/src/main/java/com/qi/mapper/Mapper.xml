@@ -115,7 +115,9 @@
             </foreach>
         </where>
     </select>
+
     <!--传过来的是map "%"#{name}"%"-->
+    <!--应用场景: 传入一个不同的类型参数,每种类型的都有好多个参数-->
     <select id="queryByMap" parameterType="java.util.HashMap" resultType="com.qi.po.User">
         select * from  user where username like "%${name}%" and id in
         <foreach collection="list" item="i" open="(" close=")" separator=",">
