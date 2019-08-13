@@ -16,14 +16,16 @@
     <!--配置处理器映射器-->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 
-
     <!--配置处理器适配器-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
 
+    <!--controller2 : 当使用实现接口HttpRequestHandler的方法时,要在spring配置该接口的适配器-->
+    <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>
+
     <!--配置处理器: 自己写的-->
     <bean id="controller" name="/hello.do" class="com.qi.controller.MyController"/>
-
+    <bean id="controller2" name="/ab.do" class="com.qi.controller.Controller2"/>
 
     <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>

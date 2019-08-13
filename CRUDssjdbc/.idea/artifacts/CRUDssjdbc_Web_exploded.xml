@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CRUDssjdbc:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CRUDssjdbc_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CRUDssjdbc/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CRUDssjdbc" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.1" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

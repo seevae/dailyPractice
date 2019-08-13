@@ -20,10 +20,11 @@
     <!--配置处理器适配器-->
     <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
 
+    <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"/>
 
     <!--配置处理器: 自己写的-->
     <bean id="controller" name="/hello.do" class="com.qi.controller.MyController"/>
-
+    <bean id="controller2" name="/ab.do" class="com.qi.controller.Controller2"/>
 
     <!--配置视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
