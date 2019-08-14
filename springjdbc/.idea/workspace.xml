@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="639">
-              <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
@@ -117,7 +117,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="215" />
     <option name="width" value="1685" />
     <option name="height" value="1032" />
@@ -304,15 +304,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565677339624</updated>
-      <workItem from="1565677342383" duration="2538000" />
+      <workItem from="1565677342383" duration="2663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2538000" />
+    <option name="totallyTimeSpent" value="2663000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="215" y="0" width="1685" height="1032" extended-state="1" />
+    <frame x="215" y="0" width="1685" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -376,7 +376,7 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
-          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
         </state>
       </provider>
     </entry>
