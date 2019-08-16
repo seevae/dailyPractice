@@ -11,8 +11,17 @@
     <title>Title</title>
 </head>
 <body>
+单文件上传
 <form action="${pageContext.request.contextPath}/file/fileUp" method="post" enctype="multipart/form-data">
-    <p>选择文件: <<input type="file" name="files"></p>
+    <p>选择文件: <input type="file" name="files"></p>
+    <p><input type="submit" value="提交"></p>
+</form>
+
+多文件上传
+<form action="${pageContext.request.contextPath}/file/fileUps" method="post" enctype="multipart/form-data">
+    <p>选择文件:<input type="file" name="files"></p><br>
+    <p>选择文件:<input type="file" name="files"></p><br>
+    <p>选择文件:<input type="file" name="files"></p><br>
     <p><input type="submit" value="提交"></p>
 </form>
 </body>
