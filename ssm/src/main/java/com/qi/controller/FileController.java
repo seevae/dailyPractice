@@ -23,4 +23,20 @@ public class FileController {
         }
         return "success";
     }
+
+    @RequestMapping("/fileUps")
+    public String fileUps(@RequestParam("files") MultipartFile files[]) throws IOException {
+        System.out.println("多文件上传");
+        String path = "E:/upLoad/";
+        if(files != null){
+            for(int i=0;i<files.length;i++){
+                String path2 = path+files[i].getOriginalFilename();
+                files[i].transferTo(new File(path2));
+            }
+        }else{
+            System.out.println("文件上传失败");
+            return "error.jsp";
+        }
+        return "success";
+    }
 }
