@@ -1,13 +1,12 @@
-package com.qi.service;/*
-    name zhang;
-    */
+package com.qi.service;
 import com.qi.po.*;
 
 import java.util.List;
 
 public interface UserService {
-    public List<User> selectAll();
-    public String show();
-
+    List<User> selectAll();
+    String show();
     void insertUser();
 }
+
+
