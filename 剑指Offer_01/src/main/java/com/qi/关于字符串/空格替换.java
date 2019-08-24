@@ -46,5 +46,4 @@ public class 空格替换 {
         String re =  replaceSpace1(sb);
         System.out.println(re);
     }
-
 }
