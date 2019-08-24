@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f91df860-9aa3-4314-9e31-0c03a5b08b5d" name="Default" comment="" />
+    <list default="true" id="9ef28a64-1502-4e49-985a-7e06e3bdfe37" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,20 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="空格替换.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于字符串/空格替换.java">
+      <file leaf-file-name="旋转数组.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于数组/旋转数组.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="反转单词顺序列.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于字符串/反转单词顺序列.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="-31">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="46" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -42,8 +33,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/qi/关于字符串/空格替换.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qi/关于字符串/反转单词顺序列.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qi/关于数组/旋转数组.java" />
       </list>
     </option>
   </component>
@@ -53,17 +43,19 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="657" />
-    <option name="y" value="165" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="620" />
+    <option name="y" value="469" />
     <option name="width" value="1031" />
-    <option name="height" value="756" />
+    <option name="height" value="510" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -107,12 +99,20 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="qi" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="剑指Offer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="剑指Offer_01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qi" type="462c0819:PsiDirectoryNode" />
+              <item name="关于数组" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,25 +137,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.反转单词顺序列">
-    <configuration name="空格替换" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qi.关于字符串.空格替换" />
+  <component name="RunManager">
+    <configuration name="旋转数组中找最小值" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qi.关于数组.旋转数组中找最小值" />
       <module name="剑指Offer" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.qi.关于字符串.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="反转单词顺序列" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.qi.关于字符串.反转单词顺序列" />
-      <module name="剑指Offer" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.qi.关于字符串.*" />
+          <option name="PATTERN" value="com.qi.关于数组.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -201,14 +190,9 @@
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.空格替换" />
-      <item itemvalue="Application.反转单词顺序列" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.反转单词顺序列" />
-        <item itemvalue="Application.空格替换" />
+        <item itemvalue="Application.旋转数组中找最小值" />
       </list>
     </recent_temporary>
   </component>
@@ -217,20 +201,21 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f91df860-9aa3-4314-9e31-0c03a5b08b5d" name="Default" comment="" />
-      <created>1566265762158</created>
+      <changelist id="9ef28a64-1502-4e49-985a-7e06e3bdfe37" name="Default" comment="" />
+      <created>1566629277723</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1566265762158</updated>
-      <workItem from="1566265764606" duration="7111000" />
+      <updated>1566629277723</updated>
+      <workItem from="1566629281586" duration="6294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7111000" />
+    <option name="totallyTimeSpent" value="6294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -239,22 +224,21 @@
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="434" height="850" id="Documentation" side_tool="true" weight="0.3299356" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26832017" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21871477" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -270,17 +254,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于字符串/空格替换.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于数组/旋转数组.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qi/关于字符串/反转单词顺序列.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="-31">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="46" selection-end-column="28" />
         </state>
       </provider>
     </entry>
