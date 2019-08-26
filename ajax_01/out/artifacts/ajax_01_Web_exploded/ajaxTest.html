@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="h1">哈哈哈哈哈</h1>
+		<button onclick="ajaxTest()">点我</button>
+	</body>
+	
+	<script>
+		function ajaxTest(){
+			//创建对象
+			var xmlhttprequest = new XMLHttpRequest();
+			if(xmlhttprequest != null){
+				//true: 是否使用异步请求
+				//
+				//打开连接
+				xmlhttprequest.open("GET","ajax.txt",true)
+				xmlhttprequest.send(null)
+				//如果状态发生变化
+				xmlhttprequest.onreadystatechange = function(){
+					// === 不光比内容还比类型
+					if(xmlhttprequest.readyState === 4 && xmlhttprequest.status == 200){
+						document.getElementById("h1").innerHTML=xmlhttprequest.responseText;
+					}else{
+						alert("返回状态码错误")
+					}
+				}
+			}else{
+				alert("你的xmlHttpRequest对象是空的");
+			}
+		}
+	</script>
+</html>
