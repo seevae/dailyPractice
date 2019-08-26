@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="but">点我获取xml文件数据</button>
+		<div id="div01"></div>
+	</body>
+	<script>
+        window.onload=function(){
+
+            /*1.实现ajax的方法   第一：我们获取的xmlhttprequest*/
+            var xmlhttp=null;
+            try{
+                xmlhttp=new XMLHttpRequest();
+
+            }catch(e){
+                try{
+                    xmlhttp=new ActiveXObject("MSXML2.XMLHTTP");
+                }catch(e){
+                    try{
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }catch(e){
+                        alert("你搞的浏览器太low里还不要玩了！！！！！");
+                    }
+                }
+            }
+
+            // 获取你的按钮，给你的按钮加事件
+            var but= document.getElementById("but");
+            but.onclick=function(){
+                xmlhttp.open("GET","Books.xml",true);
+                xmlhttp.send(null);
+
+                xmlhttp.onreadystatechange=function(){
+                    if(xmlhttp.readyState===4 && xmlhttp.status==200){
+                        var doc=xmlhttp.responseXML.documentElement;
+                        var books=doc.getElementsByTagName("book");// 获取你的页面的所有book标签
+                        var div=document.getElementById("div01");// 负责装内容
+
+
+                        // 开始遍历你的xml文件；
+                        var book, title, author, description, text;
+
+                        //开始创建你的book的div
+                        for(var i=0;i<books.length;i++){
+                            book=document.createElement("div");
+                            book.className="book";
+
+                            //创建h2存放书籍标题
+                            title = document.createElement("h2");
+                            text = document.createTextNode(books[i].childNodes[1].firstChild.data);
+
+                            title.appendChild(text);
+                            book.appendChild(title);
+                            //创建p存放作者
+                            author = document.createElement("p");
+                            author.className = "author";
+
+                            title = document.createTextNode(books[i].childNodes[3].firstChild.data);
+
+                            author.appendChild(title);
+                            book.appendChild(author);
+
+                            //创建p存放内容简介
+                            description = document.createElement("p");
+                            title = document.createTextNode(books[i].childNodes[5].firstChild.data);
+
+                            description.appendChild(title);
+                            book.appendChild(description);
+
+                            //将创建的Div节点加入到页面
+                            div.appendChild(book);
+                        }
+                    }
+                }
+            }
+        }
+	</script>
+</html>
