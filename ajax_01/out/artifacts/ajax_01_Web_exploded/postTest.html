@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="h1"></h1>
+		<button id="but01">点我</button>
+	</body>
+	
+	<script type="text/javascript">
+		//专门用来返回xmlHttpRequest对象
+		function createXmlHttpRequest(){
+			try{
+			return new XMLHttpRequest();
+			}catch(e){
+				try{
+					return new  ActiveXObject("MSXML2.XMLHTTP")
+				}catch(e){
+					try{
+						return new ActiveXObject("Microsoft.XMLHTTP")
+					}catch(e){
+						alert("你的浏览器太老了")
+					}
+				}
+			}
+		}
+		
+		//页面加载的时候创建对象
+		window.onload = function(){
+			document.getElementById("but01").onclick = function(){
+				alert("aaaaaaaa");
+				var xmlhttprequest = createXmlHttpRequest();
+				alert(xmlhttprequest);
+				xmlhttprequest.open("POST","/getServlet",true)
+				//必须要设置请求头
+                xmlhttprequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+				//参数间不有空格
+				xmlhttprequest.send("name=zhang&password=123");
+				xmlhttprequest.onreadystatechange=function(){
+					if(xmlhttprequest.readyState === 4 && xmlhttprequest.status ==200){
+						document.getElementById("h1").innerHTML = xmlhttprequest.responseText;
+					}
+				}
+			}
+		}
+
+	</script>
+</html>
