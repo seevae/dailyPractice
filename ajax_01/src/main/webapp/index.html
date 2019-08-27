@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--引入方式: 1.直接下载并导入到本地  2.使用远端服务器导入-->
+		<script src="jquery/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				
+				//元素选择器 $("标签名称")
+//				$("p").click(function(){
+//					$(this).hide()
+//				});
+				
+				$("button").click(function(){
+					$("p").hide();
+				});
+				
+				//id选择器$("#id"),绑定双击时间
+				$("#myDiv").dblclick(function(){
+					$(this).hide();
+				})
+				
+				//.class选择器
+				$(".myClass").click(function(){
+					$(this).hide();
+				})
+				
+				//鼠标穿越标签时,发生事件
+				$("#myDiv").mouseenter(function(){
+					alert("你的鼠标来到了id=myDiv的标签上")
+				})
+				
+				//鼠标离开标签时,发生事件
+				$("#NotMe").mouseleave(function(){
+					alert("你的鼠标已经离开id=notMe的标签");
+				});
+				
+				//hover() 当鼠标移动到元素上时,会触发指定的第一个函数,当鼠标离开时触发第二个函数
+				$("h1").hover(
+					function(){
+						alert("你进入了h1的标签")
+					},
+					function(){
+						alert("你离开了h1的标签")
+					}
+				)
+				
+				//获取焦点
+				$("input").focus(function(){
+					//alert("获取到了输入框");
+					$(this).css("background-color","#cccccc");
+				});
+				
+				//失去焦点
+				$("input").blur(function(){
+					alert("失去焦点了");
+				});
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		<div id="NotMe"><p>id="notMe"</p></div>
+		<p>如果点我,你我就会消失</p>  
+		<p>继续点我</p>
+		<h1>我是一个狠人</h1>
+		<button name="button">点我隐藏所有点我</button><br>
+		<div >
+			<span class="NotMyClass">span class = "NotMyClass"</span><br>
+			<span class="myClass">span class = "myClass"</span>
+		</div>
+		<div id="myDiv">
+			<p>id="myDiv"</p>
+		</div>
+		输入名字: <input name="ha" type="text"/>
+		
+	</body>
+</html>
