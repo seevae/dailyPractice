@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery/jquery.min.js"></script>
+		<script>
+			// <!--get方式-->
+			// $(document).ready(function(){
+			// 	$("button").click(function(){
+			// 		$.get("/jaServlet",function(data,status){
+			// 			alert(data+" "+status)
+			// 		})
+			// 	})
+			// })
+
+            //pst方式
+            // $(document).ready(function(){
+            //     $("button").click(function(){
+            //     	  $.post("/jaServlet",
+				// 		  {
+				// 		      name:"jack",
+				// 			  url:"baidudu"
+				// 		  },
+				// 		  function (data,status) {
+				// 			  alert(data+" "+status)
+            //               }
+				// 		  )
+				// })
+            // })
+
+			//ajax异步请求
+			// $(document).ready(function () {
+			//     $("button").click(function () {
+			// 		$.ajax(
+			// 		    {
+			// 				url:"jaServlet",
+			// 		    success:function(result){
+			// 		        $("h1").text(result);
+			// 			}
+			// 			}
+			// 		    )
+             //    })
+            // })
+
+            //ajax异步请求规范格式 -->get写法
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.ajax({
+                        type:"get",
+                        url:"/jaServlet",
+                        async:true,
+                        ssuccess:function(result){
+                            $("h1").text();
+                        }
+                    });
+                });
+            });
+
+            //ajax异步请求 -->post写法
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $.ajax({
+                        type:"post",
+                        url:"/jaServlet",
+                        async:true,
+                        ssuccess:function(result) {
+                            $("h1").text();
+                        }
+                    });
+                });
+            });
+
+		</script>
+	</head>
+	<body>
+		<h1></h1>
+		<button>点我访问后台</button>
+	</body>
+</html>
